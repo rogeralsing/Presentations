@@ -11,3 +11,16 @@ C:\Users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\b
 C:\Users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\bin\Debug\Newtonsoft.Json.dll
 C:\Users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\bin\Debug\Akka.xml
 C:\Users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Presentations\Fractal\AkkaFractal\bin\Debug\AkkaFractal.exe.config
+C:\Projects\Presentations\Fractal\AkkaFractal\obj\Debug\AkkaFractal.exe
+C:\Projects\Presentations\Fractal\AkkaFractal\obj\Debug\AkkaFractal.pdb
+C:\Projects\Presentations\Fractal\AkkaFractal\bin\Debug\AkkaFractal.exe
+C:\Projects\Presentations\Fractal\AkkaFractal\bin\Debug\AkkaFractal.pdb
+C:\Projects\Presentations\Fractal\AkkaFractal\bin\Debug\Akka.dll
+C:\Projects\Presentations\Fractal\AkkaFractal\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\Presentations\Fractal\AkkaFractal\bin\Debug\Akka.xml
+C:\Projects\Presentations\Fractal\AkkaFractal\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Presentations\Fractal\AkkaFractal\obj\Debug\AkkaFractal.csprojResolveAssemblyReference.cache
+C:\Projects\Presentations\Fractal\AkkaFractal\obj\Debug\AkkaFractal.Form1.resources
+C:\Projects\Presentations\Fractal\AkkaFractal\obj\Debug\AkkaFractal.Properties.Resources.resources
+C:\Projects\Presentations\Fractal\AkkaFractal\obj\Debug\AkkaFractal.csproj.GenerateResource.Cache

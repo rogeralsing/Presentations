@@ -10,3 +10,16 @@ C:\Users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\o
 C:\Users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\obj\Release\AkkaFractal.csproj.GenerateResource.Cache
 C:\Users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\obj\Release\AkkaFractal.exe
 C:\Users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\obj\Release\AkkaFractal.pdb
+C:\Projects\Presentations\Fractal\AkkaFractal\bin\Release\AkkaFractal.exe.config
+C:\Projects\Presentations\Fractal\AkkaFractal\obj\Release\AkkaFractal.exe
+C:\Projects\Presentations\Fractal\AkkaFractal\obj\Release\AkkaFractal.pdb
+C:\Projects\Presentations\Fractal\AkkaFractal\bin\Release\AkkaFractal.exe
+C:\Projects\Presentations\Fractal\AkkaFractal\bin\Release\AkkaFractal.pdb
+C:\Projects\Presentations\Fractal\AkkaFractal\bin\Release\Akka.dll
+C:\Projects\Presentations\Fractal\AkkaFractal\bin\Release\Newtonsoft.Json.dll
+C:\Projects\Presentations\Fractal\AkkaFractal\bin\Release\Akka.xml
+C:\Projects\Presentations\Fractal\AkkaFractal\bin\Release\Newtonsoft.Json.xml
+C:\Projects\Presentations\Fractal\AkkaFractal\obj\Release\AkkaFractal.Form1.resources
+C:\Projects\Presentations\Fractal\AkkaFractal\obj\Release\AkkaFractal.Properties.Resources.resources
+C:\Projects\Presentations\Fractal\AkkaFractal\obj\Release\AkkaFractal.csproj.GenerateResource.Cache
+C:\Projects\Presentations\Fractal\AkkaFractal\obj\Release\AkkaFractal.csprojResolveAssemblyReference.cache

@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using AkkaFractal.Drawing;
 namespace AkkaFractal
 {
     public partial class Form1 : Form
@@ -42,7 +42,7 @@ namespace AkkaFractal
             var g = Graphics.FromImage(img);
             Action<RenderedTile> renderer = tile =>
             {
-                g.DrawImageUnscaled(tile.Tile, tile.X, tile.Y);
+                g.DrawImageUnscaled(tile.Bytes.ToBitmap(), tile.X, tile.Y);
                 pictureBox1.Invalidate();
             };
             var displayTile = system.ActorOf(Props.Create(() => new DisplayTileActor(renderer)).WithDispatcher("akka.actor.synchronized-dispatcher"), "display-tile");

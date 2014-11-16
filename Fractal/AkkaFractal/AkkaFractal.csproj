@@ -55,6 +55,7 @@
     <Compile Include="Akka\RenderedTile.cs" />
     <Compile Include="Akka\RenderTile.cs" />
     <Compile Include="Akka\TileRenderActor.cs" />
+    <Compile Include="Drawing\BitmapConverter.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
