@@ -1,0 +1,13 @@
+c:\users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\bin\Debug\AkkaFractal.exe.config
+c:\users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\bin\Debug\AkkaFractal.exe
+c:\users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\bin\Debug\AkkaFractal.pdb
+c:\users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\obj\Debug\AkkaFractal.csprojResolveAssemblyReference.cache
+c:\users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\obj\Debug\AkkaFractal.Form1.resources
+c:\users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\obj\Debug\AkkaFractal.Properties.Resources.resources
+c:\users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\obj\Debug\AkkaFractal.csproj.GenerateResource.Cache
+c:\users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\obj\Debug\AkkaFractal.exe
+c:\users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\obj\Debug\AkkaFractal.pdb
+C:\Users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\bin\Debug\Akka.dll
+C:\Users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\bin\Debug\Akka.xml
+C:\Users\ralsing\documents\visual studio 2013\Projects\AkkaFractal\AkkaFractal\bin\Debug\Newtonsoft.Json.xml
