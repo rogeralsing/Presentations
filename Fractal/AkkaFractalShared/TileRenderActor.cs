@@ -14,6 +14,7 @@ namespace AkkaFractalShared
         {
             Receive<RenderTile>(render =>
             {
+                //Console.WriteLine("{0} rendering {1},{2}", Self, render.X, render.Y);
                 var res = MandelbrotSet(render.X,render.Y,render.Width,render.Height, 4000, 4000, 0.5, -2.5, 1.5, -1.5);
                 Sender.Tell(new RenderedTile(res.ToByteArray(),render.X,render.Y));
             });

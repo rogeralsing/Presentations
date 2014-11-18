@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AkkaFractalShared;
+using Akka;
+using Akka.Configuration;
 namespace AkkaFractal
 {
     public partial class Form1 : Form
@@ -26,7 +28,34 @@ namespace AkkaFractal
 
         private void RenderFractal()
         {
-            ActorSystem system = ActorSystem.Create("fractal");
+            var config = ConfigurationFactory.ParseString(@"
+akka {  
+    log-config-on-start = on
+    stdout-loglevel = DEBUG
+    loglevel = ERROR
+    actor {
+        provider = ""Akka.Remote.RemoteActorRefProvider, Akka.Remote""
+        
+        deployment {
+            /render {
+                router = round-robin-pool
+                nr-of-instances = 16
+                remote = ""akka.tcp://worker@127.0.0.1:8090""
+            }
+        }
+    }
+    remote {
+        helios.tcp {
+            transport-class = ""Akka.Remote.Transport.Helios.HeliosTcpTransport, Akka.Remote""
+		    applied-adapters = []
+		    transport-protocol = tcp
+		    port = 0
+		    hostname = localhost
+        }
+    }
+}
+");
+            ActorSystem system = ActorSystem.Create("fractal",config);
 
             var w = 8000;
             var h = 8000;
@@ -45,7 +74,7 @@ namespace AkkaFractal
                 pictureBox1.Invalidate();
             };
             var displayTile = system.ActorOf(Props.Create(() => new DisplayTileActor(renderer)).WithDispatcher("akka.actor.synchronized-dispatcher"), "display-tile");
-            var actor = system.ActorOf(Props.Create<TileRenderActor>().WithRouter(new RoundRobinPool(16)));
+            var actor = system.ActorOf(Props.Create<TileRenderActor>(),"render");
 
             for (int y = 0; y < split; y++)
             {
