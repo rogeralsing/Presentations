@@ -1,6 +1,5 @@
 ﻿using Akka.Actor;
 using Akka.Routing;
-using AkkaFractal.Akka;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AkkaFractal.Drawing;
+using AkkaFractalShared;
 namespace AkkaFractal
 {
     public partial class Form1 : Form
