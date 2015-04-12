@@ -1,0 +1,17 @@
+Akka.NET SweNug 2014-10-30/Code/MakeYourFirstActor/MakeYourFirstActor/bin/Debug/MakeYourFirstActor.exe.config
+Akka.NET SweNug 2014-10-30/Code/MakeYourFirstActor/MakeYourFirstActor/bin/Debug/MakeYourFirstActor.vshost.exe.config
+Akka.NET SweNug 2014-10-30/Code/MakeYourFirstActor/MakeYourFirstActor/bin/Debug/MakeYourFirstActor.vshost.exe.manifest
+Fractal/AkkaFractalShared/bin/Release/Akka.dll
+Fractal/AkkaFractalShared/bin/Release/AkkaFractalShared.dll
+Fractal/AkkaFractalShared/bin/Release/Newtonsoft.Json.dll
+Fractal/AkkaFractalShared/obj/Release/AkkaFractalShared.dll
+Fractal/AkkaFractalShared/packages.config
+Fractal/AkkaFractalWorker/bin/Release/Akka.dll
+Fractal/AkkaFractalWorker/bin/Release/Akka.Remote.dll
+Fractal/AkkaFractalWorker/bin/Release/AkkaFractalShared.dll
+Fractal/AkkaFractalWorker/bin/Release/AkkaFractalWorker.exe
+Fractal/AkkaFractalWorker/bin/Release/AkkaFractalWorker.vshost.exe.manifest
+Fractal/AkkaFractalWorker/bin/Release/Helios.dll
+Fractal/AkkaFractalWorker/bin/Release/Newtonsoft.Json.dll
+Fractal/AkkaFractalWorker/obj/Release/AkkaFractalWorker.exe
+Fractal/AkkaFractalWorker/packages.config
