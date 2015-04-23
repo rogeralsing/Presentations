@@ -1,0 +1,3 @@
+C:\Projects\Git\Presentations\nForum\Code\MakeYourFirstActor\MakeYourFirstActor\bin\Debug\MakeYourFirstActor.exe.config
+C:\Projects\Git\Presentations\nForum\Code\MakeYourFirstActor\MakeYourFirstActor\obj\Debug\MakeYourFirstActor.exe
+C:\Projects\Git\Presentations\nForum\Code\MakeYourFirstActor\MakeYourFirstActor\obj\Debug\MakeYourFirstActor.pdb
