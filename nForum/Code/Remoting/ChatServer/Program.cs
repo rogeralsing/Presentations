@@ -74,7 +74,8 @@ namespace ChatServer
                 NewUsername = message.NewUsername,
             };
 
-            foreach (var client in _clients) client.Tell(response, Self);
+            foreach (var client in _clients) 
+                client.Tell(response, Self);
         }
     }
 }

@@ -15,3 +15,5 @@ Fractal/AkkaFractalWorker/bin/Release/Helios.dll
 Fractal/AkkaFractalWorker/bin/Release/Newtonsoft.Json.dll
 Fractal/AkkaFractalWorker/obj/Release/AkkaFractalWorker.exe
 Fractal/AkkaFractalWorker/packages.config
+**/obj/Debug/**
+**/bin/**

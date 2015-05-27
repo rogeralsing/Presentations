@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Akka;
 using Akka.Actor;
 
 namespace MakeYourFirstActor
@@ -15,7 +10,7 @@ namespace MakeYourFirstActor
             using (var system = ActorSystem.Create("mySystem"))
             {
                 var helloActor = system.ActorOf<HelloActor>();
-                helloActor.Tell(new Hello("Swenug"));
+                helloActor.Tell(new Hello("nForum"));
                 Console.ReadLine();
             }            
         }

@@ -1,3 +1,10 @@
 C:\Projects\Git\Presentations\nForum\Code\MakeYourFirstActor\MakeYourFirstActor\bin\Debug\MakeYourFirstActor.exe.config
 C:\Projects\Git\Presentations\nForum\Code\MakeYourFirstActor\MakeYourFirstActor\obj\Debug\MakeYourFirstActor.exe
 C:\Projects\Git\Presentations\nForum\Code\MakeYourFirstActor\MakeYourFirstActor\obj\Debug\MakeYourFirstActor.pdb
+C:\Projects\Git\Presentations\nForum\Code\MakeYourFirstActor\MakeYourFirstActor\bin\Debug\MakeYourFirstActor.exe
+C:\Projects\Git\Presentations\nForum\Code\MakeYourFirstActor\MakeYourFirstActor\bin\Debug\MakeYourFirstActor.pdb
+C:\Projects\Git\Presentations\nForum\Code\MakeYourFirstActor\MakeYourFirstActor\bin\Debug\Akka.dll
+C:\Projects\Git\Presentations\nForum\Code\MakeYourFirstActor\MakeYourFirstActor\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\Git\Presentations\nForum\Code\MakeYourFirstActor\MakeYourFirstActor\bin\Debug\Akka.xml
+C:\Projects\Git\Presentations\nForum\Code\MakeYourFirstActor\MakeYourFirstActor\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Git\Presentations\nForum\Code\MakeYourFirstActor\MakeYourFirstActor\obj\Debug\MakeYourFirstActor.csprojResolveAssemblyReference.cache

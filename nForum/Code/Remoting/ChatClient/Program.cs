@@ -17,8 +17,7 @@ namespace ChatClient
 
             using (var system = ActorSystem.Create("MyClient", fluentConfig))
             {
-                var chatClient = system.ActorOf(Props.Create<ChatClientActor>());
-                system.ActorSelection("akka.tcp://MyServer@localhost:8081/user/ChatServer");
+                var chatClient = system.ActorOf(Props.Create<ChatClientActor>());                
                 chatClient.Tell(new ConnectRequest()
                 {
                     Username = "Roggan",
