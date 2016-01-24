@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Akka.Actor;
 using ChatMessages;
 
@@ -7,7 +8,7 @@ namespace ChatServer
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             using (var system = ActorSystem.Create("MyServer"))
             {
@@ -52,7 +53,8 @@ namespace ChatServer
                     Username = m.Username,
                     Text = m.Text
                 };
-                foreach (var client in clients) client.Tell(response);
+                foreach (var client in clients)
+                    client.Tell(response);
             });
         }
     }
