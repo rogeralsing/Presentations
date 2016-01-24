@@ -31,7 +31,6 @@ C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Debug\AkkaFractal.exe
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Debug\AkkaFractal.pdb
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Debug\Akka.dll
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Debug\Newtonsoft.Json.dll
-C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Debug\Akka.xml
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Debug\Newtonsoft.Json.xml
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\obj\Debug\AkkaFractal.csprojResolveAssemblyReference.cache
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\obj\Debug\AkkaFractal.Form1.resources
@@ -42,7 +41,8 @@ C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Debug\AkkaFractalShared.pd
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Debug\Akka.Remote.dll
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Debug\Google.ProtocolBuffers.dll
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Debug\Google.ProtocolBuffers.Serialization.dll
-C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Debug\Helios.dll
-C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Debug\Akka.Remote.xml
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Debug\Google.ProtocolBuffers.xml
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Debug\Google.ProtocolBuffers.Serialization.xml
+C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Debug\Akka.ExternalAnnotations.xml
+C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Debug\Akka.Remote.pdb
+C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Debug\Akka.pdb

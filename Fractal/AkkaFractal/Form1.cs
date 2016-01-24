@@ -39,8 +39,7 @@ akka {
         deployment {
             /render {
                 router = round-robin-pool
-                nr-of-instances = 16
-                remote = ""akka.tcp://worker@127.0.0.1:8090""
+                nr-of-instances = 16               
             }
         }
     }

@@ -6,14 +6,15 @@ C:\Projects\Git\Presentations\Fractal\AkkaFractalWorker\bin\Release\Akka.Remote.
 C:\Projects\Git\Presentations\Fractal\AkkaFractalWorker\bin\Release\AkkaFractalShared.dll
 C:\Projects\Git\Presentations\Fractal\AkkaFractalWorker\bin\Release\Google.ProtocolBuffers.dll
 C:\Projects\Git\Presentations\Fractal\AkkaFractalWorker\bin\Release\Google.ProtocolBuffers.Serialization.dll
-C:\Projects\Git\Presentations\Fractal\AkkaFractalWorker\bin\Release\Helios.dll
 C:\Projects\Git\Presentations\Fractal\AkkaFractalWorker\bin\Release\Newtonsoft.Json.dll
 C:\Projects\Git\Presentations\Fractal\AkkaFractalWorker\bin\Release\AkkaFractalShared.pdb
 C:\Projects\Git\Presentations\Fractal\AkkaFractalWorker\bin\Release\Akka.xml
 C:\Projects\Git\Presentations\Fractal\AkkaFractalWorker\bin\Release\Akka.Remote.xml
 C:\Projects\Git\Presentations\Fractal\AkkaFractalWorker\bin\Release\Google.ProtocolBuffers.xml
 C:\Projects\Git\Presentations\Fractal\AkkaFractalWorker\bin\Release\Google.ProtocolBuffers.Serialization.xml
-C:\Projects\Git\Presentations\Fractal\AkkaFractalWorker\bin\Release\Newtonsoft.Json.xml
 C:\Projects\Git\Presentations\Fractal\AkkaFractalWorker\obj\Release\AkkaFractalWorker.csprojResolveAssemblyReference.cache
 C:\Projects\Git\Presentations\Fractal\AkkaFractalWorker\obj\Release\AkkaFractalWorker.exe
 C:\Projects\Git\Presentations\Fractal\AkkaFractalWorker\obj\Release\AkkaFractalWorker.pdb
+C:\Projects\Git\Presentations\Fractal\AkkaFractalWorker\bin\Release\Akka.ExternalAnnotations.xml
+C:\Projects\Git\Presentations\Fractal\AkkaFractalWorker\bin\Release\Akka.Remote.pdb
+C:\Projects\Git\Presentations\Fractal\AkkaFractalWorker\bin\Release\Akka.pdb

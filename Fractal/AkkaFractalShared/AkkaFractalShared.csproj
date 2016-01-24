@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Akka">
-      <HintPath>..\packages\Akka.0.7.0\lib\net45\Akka.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -55,7 +52,10 @@
     <Compile Include="TileRenderActor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\..\..\akka.net\src\core\Akka\Akka.csproj">
+      <Project>{5deddf90-37f0-48d3-a0b0-a5cbd8a7e377}</Project>
+      <Name>Akka</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

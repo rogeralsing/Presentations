@@ -3,7 +3,7 @@ C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\bin\Debug\AkkaFractalSha
 C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\bin\Debug\AkkaFractalShared.pdb
 C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\bin\Debug\Akka.dll
 C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\bin\Debug\Newtonsoft.Json.dll
-C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\bin\Debug\Akka.xml
-C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\bin\Debug\Newtonsoft.Json.xml
 C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\obj\Debug\AkkaFractalShared.dll
 C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\obj\Debug\AkkaFractalShared.pdb
+C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\bin\Debug\Akka.ExternalAnnotations.xml
+C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\bin\Debug\Akka.pdb

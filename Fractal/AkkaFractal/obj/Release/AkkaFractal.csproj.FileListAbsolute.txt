@@ -32,7 +32,6 @@ C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Release\Akka.Remote.dll
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Release\AkkaFractalShared.dll
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Release\Google.ProtocolBuffers.dll
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Release\Google.ProtocolBuffers.Serialization.dll
-C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Release\Helios.dll
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Release\Newtonsoft.Json.dll
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Release\AkkaFractalShared.pdb
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Release\Akka.xml
@@ -45,3 +44,6 @@ C:\Projects\Git\Presentations\Fractal\AkkaFractal\obj\Release\AkkaFractal.Form1.
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\obj\Release\AkkaFractal.Properties.Resources.resources
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\obj\Release\AkkaFractal.csproj.GenerateResource.Cache
 C:\Projects\Git\Presentations\Fractal\AkkaFractal\obj\Release\AkkaFractal.pdb
+C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Release\Akka.ExternalAnnotations.xml
+C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Release\Akka.Remote.pdb
+C:\Projects\Git\Presentations\Fractal\AkkaFractal\bin\Release\Akka.pdb

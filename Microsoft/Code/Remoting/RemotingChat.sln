@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatClient", "ChatClient\ChatClient.csproj", "{69AED1DD-02E1-423F-950C-DE6010DFA346}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatServer", "ChatServer\ChatServer.csproj", "{7FD886CC-216B-4324-9AB2-241494598B06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatMessages", "ChatMessages\ChatMessages.csproj", "{819221CB-82B7-43D3-A4DE-E00AF17F2FDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Mono|Any CPU = Debug Mono|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release Mono|Any CPU = Release Mono|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69AED1DD-02E1-423F-950C-DE6010DFA346}.Debug Mono|Any CPU.ActiveCfg = Debug Mono|Any CPU
+		{69AED1DD-02E1-423F-950C-DE6010DFA346}.Debug Mono|Any CPU.Build.0 = Debug Mono|Any CPU
+		{69AED1DD-02E1-423F-950C-DE6010DFA346}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69AED1DD-02E1-423F-950C-DE6010DFA346}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69AED1DD-02E1-423F-950C-DE6010DFA346}.Release Mono|Any CPU.ActiveCfg = Release Mono|Any CPU
+		{69AED1DD-02E1-423F-950C-DE6010DFA346}.Release Mono|Any CPU.Build.0 = Release Mono|Any CPU
+		{69AED1DD-02E1-423F-950C-DE6010DFA346}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69AED1DD-02E1-423F-950C-DE6010DFA346}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FD886CC-216B-4324-9AB2-241494598B06}.Debug Mono|Any CPU.ActiveCfg = Debug Mono|Any CPU
+		{7FD886CC-216B-4324-9AB2-241494598B06}.Debug Mono|Any CPU.Build.0 = Debug Mono|Any CPU
+		{7FD886CC-216B-4324-9AB2-241494598B06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FD886CC-216B-4324-9AB2-241494598B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FD886CC-216B-4324-9AB2-241494598B06}.Release Mono|Any CPU.ActiveCfg = Release Mono|Any CPU
+		{7FD886CC-216B-4324-9AB2-241494598B06}.Release Mono|Any CPU.Build.0 = Release Mono|Any CPU
+		{7FD886CC-216B-4324-9AB2-241494598B06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FD886CC-216B-4324-9AB2-241494598B06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{819221CB-82B7-43D3-A4DE-E00AF17F2FDF}.Debug Mono|Any CPU.ActiveCfg = Debug Mono|Any CPU
+		{819221CB-82B7-43D3-A4DE-E00AF17F2FDF}.Debug Mono|Any CPU.Build.0 = Debug Mono|Any CPU
+		{819221CB-82B7-43D3-A4DE-E00AF17F2FDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{819221CB-82B7-43D3-A4DE-E00AF17F2FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{819221CB-82B7-43D3-A4DE-E00AF17F2FDF}.Release Mono|Any CPU.ActiveCfg = Release Mono|Any CPU
+		{819221CB-82B7-43D3-A4DE-E00AF17F2FDF}.Release Mono|Any CPU.Build.0 = Release Mono|Any CPU
+		{819221CB-82B7-43D3-A4DE-E00AF17F2FDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{819221CB-82B7-43D3-A4DE-E00AF17F2FDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

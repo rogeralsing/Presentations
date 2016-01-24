@@ -3,6 +3,8 @@ C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\bin\Release\AkkaFractalS
 C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\bin\Release\Akka.dll
 C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\bin\Release\Newtonsoft.Json.dll
 C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\bin\Release\Akka.xml
-C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\bin\Release\Newtonsoft.Json.xml
 C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\obj\Release\AkkaFractalShared.dll
 C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\obj\Release\AkkaFractalShared.pdb
+C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\bin\Release\Akka.ExternalAnnotations.xml
+C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\bin\Release\Akka.pdb
+C:\Projects\Git\Presentations\Fractal\AkkaFractalShared\obj\Release\AkkaFractalShared.csprojResolveAssemblyReference.cache
