@@ -19,3 +19,16 @@ C:\Projects\Git\Presentations\CNUG\Code\Fractal\AkkaFractalShared\bin\Release\Ne
 C:\Projects\Git\Presentations\CNUG\Code\Fractal\AkkaFractalShared\obj\Release\AkkaFractalShared.csprojResolveAssemblyReference.cache
 C:\Projects\Git\Presentations\CNUG\Code\Fractal\AkkaFractalShared\obj\Release\AkkaFractalShared.dll
 C:\Projects\Git\Presentations\CNUG\Code\Fractal\AkkaFractalShared\obj\Release\AkkaFractalShared.pdb
+C:\Projects\Git\Presentations\Swetugg\Code\Fractal\AkkaFractalShared\bin\Release\AkkaFractalShared.dll
+C:\Projects\Git\Presentations\Swetugg\Code\Fractal\AkkaFractalShared\bin\Release\AkkaFractalShared.pdb
+C:\Projects\Git\Presentations\Swetugg\Code\Fractal\AkkaFractalShared\bin\Release\Akka.dll
+C:\Projects\Git\Presentations\Swetugg\Code\Fractal\AkkaFractalShared\bin\Release\Akka.Remote.dll
+C:\Projects\Git\Presentations\Swetugg\Code\Fractal\AkkaFractalShared\bin\Release\Helios.dll
+C:\Projects\Git\Presentations\Swetugg\Code\Fractal\AkkaFractalShared\bin\Release\Newtonsoft.Json.dll
+C:\Projects\Git\Presentations\Swetugg\Code\Fractal\AkkaFractalShared\bin\Release\Google.ProtocolBuffers.dll
+C:\Projects\Git\Presentations\Swetugg\Code\Fractal\AkkaFractalShared\bin\Release\Akka.xml
+C:\Projects\Git\Presentations\Swetugg\Code\Fractal\AkkaFractalShared\bin\Release\Akka.Remote.xml
+C:\Projects\Git\Presentations\Swetugg\Code\Fractal\AkkaFractalShared\bin\Release\Newtonsoft.Json.xml
+C:\Projects\Git\Presentations\Swetugg\Code\Fractal\AkkaFractalShared\obj\Release\AkkaFractalShared.csprojResolveAssemblyReference.cache
+C:\Projects\Git\Presentations\Swetugg\Code\Fractal\AkkaFractalShared\obj\Release\AkkaFractalShared.dll
+C:\Projects\Git\Presentations\Swetugg\Code\Fractal\AkkaFractalShared\obj\Release\AkkaFractalShared.pdb

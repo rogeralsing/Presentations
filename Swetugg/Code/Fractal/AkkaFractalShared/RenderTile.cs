@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AkkaFractalShared
+﻿namespace AkkaFractalShared
 {
     public class RenderTile
     {
-        public RenderTile(int x,int y,int height,int width)
+        public RenderTile(int x, int y, int height, int width)
         {
             X = x;
             Y = y;
