@@ -16,19 +16,13 @@ namespace ChatClient
                 while (true)
                 {
                     var input = Console.ReadLine();
-                    if (input.StartsWith("/"))
+                    var command = Parser.Parse(input);
+                    if (command.Command == "/nick")
                     {
-                        var parts = input.Split(' ');
-                        var cmd = parts[0].ToLowerInvariant();
-                        var rest = string.Join(" ", parts.Skip(1));
-
-                        if (cmd == "/nick")
+                        chatClient.Tell(new BeginRenameUser
                         {
-                            chatClient.Tell(new BeginRenameUser
-                            {
-                                NewNickname = rest
-                            });
-                        }
+                            NewUsername = command.Text
+                        });
                     }
                     else
                     {
@@ -44,7 +38,7 @@ namespace ChatClient
 
     public class BeginRenameUser
     {
-        public string NewNickname { get; set; }
+        public string NewUsername { get; set; }
     }
 
     public class BeginSay
@@ -76,11 +70,13 @@ namespace ChatClient
                 var message = new RenameUser
                 {
                     OldUsername = nick,
-                    NewUsername = m.NewNickname
+                    NewUsername = m.NewUsername
                 };
-                Console.WriteLine($"Changing nick to {message.NewUsername}");
-                nick = message.NewUsername;
+
                 server.Tell(message);
+
+                Console.WriteLine($"Changing nick to {m.NewUsername}");
+                nick = m.NewUsername;
             });
 
             Receive<Connected>(m =>

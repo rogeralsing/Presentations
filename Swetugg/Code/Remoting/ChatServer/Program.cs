@@ -30,7 +30,7 @@ namespace ChatServer
                 Sender.Tell(new Connected
                 {
                     Message = $"Hello {m.Username}, Welcome to Akka .NET chat example"
-                }, Self);
+                });
             });
 
             Receive<RenameUser>(m =>
@@ -42,7 +42,7 @@ namespace ChatServer
                 };
 
                 foreach (var client in clients)
-                    client.Tell(response, Self);
+                    client.Tell(response);
             });
 
             Receive<Say>(m =>
@@ -52,8 +52,8 @@ namespace ChatServer
                     Username = m.Username,
                     Text = m.Text
                 };
-                foreach (var client in clients) client.Tell(response, Self);
+                foreach (var client in clients) client.Tell(response);
             });
         }
-    }    
+    }
 }
