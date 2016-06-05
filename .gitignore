@@ -23,3 +23,5 @@ Fractal/AkkaFractalWorker/packages.config
 **/obj/
 **/obj/
 **/.suo
+**/.suo
+.suo
