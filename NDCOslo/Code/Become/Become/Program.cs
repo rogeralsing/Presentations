@@ -52,8 +52,8 @@ namespace Become
             }
             else if (message is Hit)
             {
-                Console.WriteLine("You hit player for 10 damage...");
                 _hitpoints -= 10;
+                Console.WriteLine($"You hit player for 10 damage...HP: {_hitpoints}/{_maxHitpoints}");
                 if (_hitpoints <= 0)
                 {
                     Console.WriteLine("Player dies...");
@@ -68,6 +68,7 @@ namespace Become
             if (message is Resurrect)
             {
                 Console.WriteLine("You resurrect the player, he is alive again!! woot!");
+                _hitpoints = _maxHitpoints;
                 Become(Alive);
             }
             else if (message is Hit)
@@ -83,7 +84,7 @@ namespace Become
 
         private static void ScheduleWhisperToRess()
         {
-            Context.System.Scheduler.ScheduleOnce(TimeSpan.FromSeconds(3), () =>
+            Context.System.Scheduler.Advanced.ScheduleOnce(TimeSpan.FromSeconds(3), () =>
             {
                 ConsoleColor tmp = Console.ForegroundColor;
                 Console.ForegroundColor = ConsoleColor.Magenta;

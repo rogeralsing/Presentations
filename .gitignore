@@ -17,3 +17,8 @@ Fractal/AkkaFractalWorker/obj/Release/AkkaFractalWorker.exe
 Fractal/AkkaFractalWorker/packages.config
 **/obj/Debug/**
 **/bin/**
+*.suo
+*.suo
+**/packages/
+**/obj/
+**/obj/
