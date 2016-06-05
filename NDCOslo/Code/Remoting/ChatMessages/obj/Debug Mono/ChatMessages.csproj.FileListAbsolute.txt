@@ -1,0 +1,5 @@
+C:\Git\Presentations\DevSum\Code\Remoting\ChatMessages\bin\Debug Mono\ChatMessages.dll
+C:\Git\Presentations\DevSum\Code\Remoting\ChatMessages\bin\Debug Mono\ChatMessages.pdb
+C:\Git\Presentations\DevSum\Code\Remoting\ChatMessages\obj\Debug Mono\ChatMessages.csprojResolveAssemblyReference.cache
+C:\Git\Presentations\DevSum\Code\Remoting\ChatMessages\obj\Debug Mono\ChatMessages.dll
+C:\Git\Presentations\DevSum\Code\Remoting\ChatMessages\obj\Debug Mono\ChatMessages.pdb
