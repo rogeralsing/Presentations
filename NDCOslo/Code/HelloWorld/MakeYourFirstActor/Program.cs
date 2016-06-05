@@ -10,7 +10,7 @@ namespace MakeYourFirstActor
             using (var system = ActorSystem.Create("mySystem"))
             {
                 var helloActor = system.ActorOf<HelloActor>();
-                helloActor.Tell(new Hello("DevSum"));
+                helloActor.Tell(new Hello("NDCOslo"));
                 Console.ReadLine();
             }
         }
