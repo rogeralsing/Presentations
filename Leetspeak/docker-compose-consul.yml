@@ -1,0 +1,71 @@
+consulagent:
+  labels:
+    io.rancher.container.dns: 'true'
+    io.rancher.scheduler.global: 'true'
+    io.rancher.container.pull_image: always
+    io.rancher.scheduler.affinity:host_label: consul.role=client
+  tty: true
+  command:
+  - agent
+  - -retry-join=consul1
+  image: rogeralsing/consul:latest
+  links:
+  - 'consul1:'
+  stdin_open: true
+  ports:
+  - 8500:8500/tcp
+  net: host
+consul2:
+  labels:
+    io.rancher.container.dns: 'true'
+    io.rancher.container.pull_image: always
+    io.rancher.scheduler.affinity:host_label: consul.role=server
+  tty: true
+  command:
+  - agent
+  - -retry-join=consul1
+  - -server
+  - -bootstrap-expect=3
+  hostname: consul2
+  image: rogeralsing/consul:latest
+  links:
+  - consul1:consul1
+  stdin_open: true
+  ports:
+  - 8500:8500/tcp
+  net: host
+consul3:
+  labels:
+    io.rancher.container.dns: 'true'
+    io.rancher.container.pull_image: always
+    io.rancher.scheduler.affinity:host_label: consul.role=server
+  tty: true
+  command:
+  - agent
+  - -retry-join=consul1
+  - -server
+  - -bootstrap-expect=3
+  hostname: consul3
+  image: rogeralsing/consul:latest
+  links:
+  - 'consul1:'
+  stdin_open: true
+  ports:
+  - 8500:8500/tcp
+  net: host
+consul1:
+  labels:
+    io.rancher.container.dns: 'true'
+    io.rancher.container.pull_image: always
+    io.rancher.scheduler.affinity:host_label: consul.role=server
+  command:
+  - agent
+  - -server
+  - -bootstrap-expect=3
+  tty: true
+  hostname: consul1
+  image: rogeralsing/consul:latest
+  stdin_open: true
+  ports:
+  - 8500:8500/tcp
+  net: host

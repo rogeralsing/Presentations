@@ -1,0 +1,8 @@
+reaper:
+  labels:
+    io.rancher.scheduler.global: 'true'
+    io.rancher.container.pull_image: always
+    io.rancher.scheduler.affinity:host_label: consul.role=client
+  tty: true
+  image: rogeralsing/consulreaper
+  stdin_open: true
