@@ -50,7 +50,7 @@ namespace Service2
 
             app
             .UseMvc()
-            .UseMicrophone("AspNetService", "1.0", new Uri($"http://{host}:{port}"));
+            .UseMicrophone("service2", "1.0", new Uri($"http://{host}:{port}"));
         }
 
         public static void Main(string[] args)

@@ -6,9 +6,8 @@ using System.Net.Http;
 namespace Service1.Controllers
 {
     [Route("api/[controller]")]
-    public class ValuesController : Controller
+    public class AggregateController : Controller
     {
-        // GET: api/values
         [HttpGet]
         public async Task<string> Get([FromServices]IClusterClient client)
         {            

@@ -5,5 +5,5 @@ aspnet:
     io.rancher.container.pull_image: always
     io.rancher.scheduler.affinity:host_label: consul.role=client
   tty: true
-  image: rogeralsing/aspnetconsul:latest
+  image: rogeralsing/service2:latest
   stdin_open: true
