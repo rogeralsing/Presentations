@@ -16,7 +16,7 @@ namespace Service1.Controllers
             var http = new HttpClient();
             http.BaseAddress = uri;
             var res = await http.GetStringAsync("");
-            return res;
+            return $"Got '{res} from {uri}'";
         }
     }
 }
