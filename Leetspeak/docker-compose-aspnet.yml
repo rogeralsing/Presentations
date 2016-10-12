@@ -1,4 +1,13 @@
-aspnet:
+service1:
+  ports:
+  - :5000/tcp
+  labels:
+    io.rancher.container.pull_image: always
+    io.rancher.scheduler.affinity:host_label: consul.role=client
+  tty: true
+  image: rogeralsing/service1:latest
+  stdin_open: true
+service2:
   ports:
   - :5000/tcp
   labels:
@@ -7,3 +16,4 @@ aspnet:
   tty: true
   image: rogeralsing/service2:latest
   stdin_open: true
+
