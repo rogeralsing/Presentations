@@ -46,7 +46,6 @@ namespace Service2
 
             var port = Startup.Port.Value;
             var host = Startup.Host.Value;
-            Console.WriteLine($"Running on rancher host IP {host}");
 
             app
             .UseMvc()

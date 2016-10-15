@@ -46,7 +46,6 @@ namespace Service1
 
             var port = Startup.Port.Value;
             var host = Startup.Host.Value;
-            Console.WriteLine($"Running on rancher host IP {host}");
 
             app
             .UseMvc()
@@ -69,8 +68,6 @@ namespace Service1
 
     public static class RancherMetadata
     {
-
-
         public static string GetHost()
         {
             var host = HttpGet("http://rancher-metadata/2015-12-19/self/host/agent_ip");
