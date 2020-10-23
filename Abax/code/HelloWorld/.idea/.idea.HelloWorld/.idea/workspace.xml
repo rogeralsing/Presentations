@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fb284c1-26a8-4820-9084-ce31ccd0a8c8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Chat/.idea/.idea.Chat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Chat/.idea/.idea.Chat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloWorld/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloWorld/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../protoactor.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../protoactor.pptx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
