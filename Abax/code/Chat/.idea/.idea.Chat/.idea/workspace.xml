@@ -10,12 +10,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b1289e25-49ee-4963-8239-46e5f9e11d7f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../protoactor.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../protoactor.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Arkmöte.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../FailingGracefully/QConSP/failingactors.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FailingGracefully/QConSP/failingactors.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ProtoActor/ProtoX/logo.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ProtoActor/ProtoX/protoactor.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ProtoActor/QConSP/protoactor.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ProtoActor/QConSP/protoactor.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Starcounter/usa.pptx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +39,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Project.Client">
@@ -94,7 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603396821015</updated>
       <workItem from="1603396828193" duration="302000" />
-      <workItem from="1603397140544" duration="309000" />
+      <workItem from="1603397140544" duration="586000" />
     </task>
     <servers />
   </component>
