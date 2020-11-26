@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Google.Protobuf" Version="3.13.0" />
+        <PackageReference Include="Jaeger" Version="0.1.1" />
+        <PackageReference Include="Grpc.Tools" Version="2.32.0" PrivateAssets="All" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\src\diagnostics\Proto.OpenTracing\Proto.OpenTracing.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <Protobuf Include="Protos.proto" GrpcServices="Client" />
+    </ItemGroup>
+</Project>

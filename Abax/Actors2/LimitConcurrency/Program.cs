@@ -10,7 +10,7 @@ namespace LimitConcurrency
         public Task ReceiveAsync(IContext context)
         {
             Console.WriteLine($"{context.Self.Id} Got Message {context.Message}");
-            return Actor.Done;
+            return Task.CompletedTask;
         }
     }
     
@@ -18,13 +18,14 @@ namespace LimitConcurrency
     {
         static void Main(string[] args)
         {
-            var props = Actor.FromProducer(() => new WorkerActor());
-            var routerProps = Router.NewRoundRobinPool(props, 3);
-            var routerPid = Actor.Spawn(routerProps);
+            var system = new ActorSystem();
+            var props = Props.FromProducer(() => new WorkerActor());
+            var routerProps = system.Root.NewRoundRobinPool(props, 3);
+            var routerPid = system.Root.SpawnNamed(routerProps,"MyRouter");
 
             for (int i = 0; i < 100; i++)
             {
-                routerPid.Tell("Hello " + i);
+                system.Root.Send(routerPid,"Hello " + i);
             }
             Console.ReadLine();
         }

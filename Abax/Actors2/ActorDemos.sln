@@ -6,6 +6,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThrottlingNaive", "Throttli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Throttling", "Throttling\Throttling.csproj", "{49614331-33B4-437F-BD0B-B4E143EAC7CB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Router", "Router\Router.csproj", "{6BCCBF9C-0FCF-4E1B-A394-89929DCD0D06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Middleware", "Middleware\Middleware.csproj", "{4BD1E213-0D3C-44E0-A12C-117C7778FA66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LimitConcurrency", "LimitConcurrency\LimitConcurrency.csproj", "{C6815A95-F225-4FBB-BA75-C6FFBDACCB8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +30,17 @@ Global
 		{49614331-33B4-437F-BD0B-B4E143EAC7CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49614331-33B4-437F-BD0B-B4E143EAC7CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49614331-33B4-437F-BD0B-B4E143EAC7CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BCCBF9C-0FCF-4E1B-A394-89929DCD0D06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BCCBF9C-0FCF-4E1B-A394-89929DCD0D06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BCCBF9C-0FCF-4E1B-A394-89929DCD0D06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BCCBF9C-0FCF-4E1B-A394-89929DCD0D06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BD1E213-0D3C-44E0-A12C-117C7778FA66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BD1E213-0D3C-44E0-A12C-117C7778FA66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BD1E213-0D3C-44E0-A12C-117C7778FA66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BD1E213-0D3C-44E0-A12C-117C7778FA66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6815A95-F225-4FBB-BA75-C6FFBDACCB8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6815A95-F225-4FBB-BA75-C6FFBDACCB8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6815A95-F225-4FBB-BA75-C6FFBDACCB8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6815A95-F225-4FBB-BA75-C6FFBDACCB8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
