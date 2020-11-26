@@ -7,13 +7,13 @@ using Proto.Schedulers.SimpleScheduler;
 
 namespace Throttling
 {
-    public class Tick {}
+    public record Tick;
 
     public class ThrottledActor : IActor
     {
-        private readonly Queue<object> _messages = new Queue<object>();
-        private readonly ISimpleScheduler _scheduler = new SimpleScheduler();
-        private int _tokens = 0;
+        private readonly Queue<object> _messages = new();
+        private ISimpleScheduler _scheduler;
+        private int _tokens;
 
         public async Task ReceiveAsync(IContext context)
         {
@@ -21,6 +21,7 @@ namespace Throttling
             {
                 case Started _:
                 {
+                    _scheduler = new SimpleScheduler(context);
                     _scheduler.ScheduleTellRepeatedly(TimeSpan.FromSeconds(0), TimeSpan.FromSeconds(1), context.Self, new Tick(), out _);
                     break;
                 }
@@ -52,7 +53,7 @@ namespace Throttling
         private Task ThrottledReceiveAsync(object message)
         {
             Console.WriteLine("Got Message " + message);
-            return Actor.Done;
+            return Task.CompletedTask;
         }
     }
 
@@ -60,12 +61,13 @@ namespace Throttling
     {
         static void Main(string[] args)
         {
-            var props = Actor.FromProducer(() => new ThrottledActor());
-            var pid = Actor.Spawn(props);
+            var system = new ActorSystem();
+            var props = Props.FromProducer(() => new ThrottledActor());
+            var pid = system.Root.Spawn(props);
 
             for (int i = 0; i < 100; i++)
             {
-                pid.Tell("Hello " + i);
+                system.Root.Send(pid, $"Hello {i}");
             }
             Console.ReadLine();
         }

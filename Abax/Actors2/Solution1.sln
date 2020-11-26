@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BecomeWoW", "BecomeWoW\BecomeWoW\BecomeWoW.csproj", "{D3C885A3-05A1-49AF-BA44-C3377198ADF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThrottlingNaive", "ThrottlingNaive\ThrottlingNaive.csproj", "{4A655058-0EAD-4F35-8435-14F5CA40CCFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Throttling", "Throttling\Throttling.csproj", "{49614331-33B4-437F-BD0B-B4E143EAC7CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3C885A3-05A1-49AF-BA44-C3377198ADF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3C885A3-05A1-49AF-BA44-C3377198ADF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3C885A3-05A1-49AF-BA44-C3377198ADF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3C885A3-05A1-49AF-BA44-C3377198ADF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A655058-0EAD-4F35-8435-14F5CA40CCFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A655058-0EAD-4F35-8435-14F5CA40CCFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A655058-0EAD-4F35-8435-14F5CA40CCFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A655058-0EAD-4F35-8435-14F5CA40CCFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49614331-33B4-437F-BD0B-B4E143EAC7CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49614331-33B4-437F-BD0B-B4E143EAC7CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49614331-33B4-437F-BD0B-B4E143EAC7CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49614331-33B4-437F-BD0B-B4E143EAC7CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

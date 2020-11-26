@@ -24,12 +24,13 @@ namespace ThrottlingNaive
     {
         static void Main(string[] args)
         {
-            var props = Actor.FromProducer(() => new ThrottledActor());
-            var pid = Actor.Spawn(props);
+            var system = new ActorSystem();
+            var props = Props.FromProducer(() => new ThrottledActor());
+            var pid = system.Root.Spawn(props);
 
             for (int i = 0; i < 100; i++)
             {
-                pid.Tell("Hello " + i);
+                system.Root.Send(pid, $"Hello {i}");
             }
             Console.ReadLine();
         }
