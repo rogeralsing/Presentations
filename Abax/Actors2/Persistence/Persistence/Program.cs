@@ -22,9 +22,7 @@ class Program
     {
         var context = new RootContext(new ActorSystem());
         var provider = new SqliteProvider(new SqliteConnectionStringBuilder { DataSource = "states.db" });
-
         var props = Props.FromProducer(() => new MyPersistenceActor(provider));
-
         var pid = context.Spawn(props);
 
         Console.ReadLine();
@@ -33,7 +31,7 @@ class Program
     class MyPersistenceActor : IActor
     {
         private PID _loopActor;
-        private State _state = new State();
+        private State _state = new();
         private readonly Persistence _persistence;
 
         public MyPersistenceActor(IProvider provider)
@@ -87,94 +85,65 @@ class Program
 
         private class StartLoopActor { }
 
-        private bool _timerStarted = false;
+        private bool _timerStarted;
 
-        public async Task ReceiveAsync(IContext context)
-        {
-            switch (context.Message)
+        public Task ReceiveAsync(IContext context) =>
+            context.Message switch
             {
-                case Started msg:
+                Started           => OnStarted(context),
+                StartLoopActor    => OnStartLoopActor(context),
+                RenameCommand msg => OnRenameCommand(msg),
+                _                 => Task.CompletedTask
+            };
 
-                    Console.WriteLine("MyPersistenceActor - Started");
+        private async Task OnStarted(IContext context)
+        {
+            Console.WriteLine("MyPersistenceActor - Started");
+            Console.WriteLine("MyPersistenceActor - Current State: {0}", _state);
 
-                    Console.WriteLine("MyPersistenceActor - Current State: {0}", _state);
+            await _persistence.RecoverStateAsync();
 
-                    await _persistence.RecoverStateAsync();
-
-                    context.Send(context.Self, new StartLoopActor());
-
-                    break;
-
-                case StartLoopActor msg:
-
-                    await Handle(context, msg);
-
-                    break;
-
-                case RenameCommand msg:
-
-                    await Handle(msg);
-
-                    break;
-            }
+            context.Send(context.Self, new StartLoopActor());
         }
 
-        private Task Handle(IContext context, StartLoopActor message)
+        private Task OnStartLoopActor(IContext context)
         {
             if (_timerStarted) return Task.CompletedTask;
-
             _timerStarted = true;
-
             Console.WriteLine("MyPersistenceActor - StartLoopActor");
-
             var props = Props.FromProducer(() => new LoopActor());
-
             _loopActor = context.Spawn(props);
-
             return Task.CompletedTask;
         }
 
-        private async Task Handle(RenameCommand message)
+        private async Task OnRenameCommand(RenameCommand message)
         {
             Console.WriteLine("MyPersistenceActor - RenameCommand");
-
             _state.Name = message.Name;
-
             await _persistence.PersistEventAsync(new RenameEvent { Name = message.Name });
         }
     }
 
-    class LoopActor : IActor
+    public class LoopActor : IActor
     {
         private class LoopParentMessage { }
 
-        public Task ReceiveAsync(IContext context)
+        public async Task ReceiveAsync(IContext context)
         {
             switch (context.Message)
             {
                 case Started _:
 
                     Console.WriteLine("LoopActor - Started");
-
                     context.Send(context.Self, new LoopParentMessage());
-
                     break;
                 case LoopParentMessage _:
-
-                    Task.Run(async () =>
-                    {
-
-                        context.Send(context.Parent, new RenameCommand { Name = GeneratePronounceableName(5) });
-
-                        await Task.Delay(TimeSpan.FromMilliseconds(500));
-
-                        context.Send(context.Self, new LoopParentMessage());
-                    });
-
+                    
+                    context.Send(context.Parent, new RenameCommand { Name = GeneratePronounceableName(5) });
+                    await Task.Delay(TimeSpan.FromMilliseconds(500));
+                    context.Send(context.Self, new LoopParentMessage());
                     break;
             }
-
-            return Task.CompletedTask;
         }
 
         static string GeneratePronounceableName(int length)

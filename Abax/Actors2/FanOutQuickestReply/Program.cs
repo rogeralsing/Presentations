@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Proto;
@@ -6,14 +7,11 @@ using Proto.Router;
 
 namespace FanOutQuickestReply
 {
-    public class DoWork
-    {
-        public string Payload { get; set; }
-    }
+    public record DoWork(string Payload);
 
     public class WorkerActor : IActor
     {
-        private readonly Random _rnd = new Random();
+        private readonly Random _rnd = new();
 
         public async Task ReceiveAsync(IContext context)
         {
@@ -22,7 +20,7 @@ namespace FanOutQuickestReply
                 case DoWork work:
                 {
                     await Task.Delay(_rnd.Next(10, 100));
-                    context.Respond("Done " + context.Self.Id);
+                    context.Respond($"Done {context.Self.Id}");
                     break;
                 }
             }
@@ -31,50 +29,61 @@ namespace FanOutQuickestReply
 
     public class FanOutActor : IActor
     {
-        private readonly PID[] _workers;
+        private readonly IReadOnlyCollection<PID> _workers;
 
-        public FanOutActor()
+        public FanOutActor(IReadOnlyCollection<PID> workers)
         {
-            var workerProps = Actor.FromProducer(() => new WorkerActor());
-            _workers = new PID[3];
-
-            for (int i = 0; i < _workers.Length; i++)
-            {
-                _workers[i] = Actor.Spawn(workerProps);
-            }
+            _workers = workers;
         }
 
-        public Task ReceiveAsync(IContext context)
+        public async Task ReceiveAsync(IContext context)
         {
             switch (context.Message)
             {
                 case DoWork work:
                 {
-                    var tasks = _workers.Select(w => w.RequestAsync<string>(work)).ToList();
-                    var any = Task.WhenAny(tasks);
-                    context.ReenterAfter(any, t =>
+                    var tasks = new List<Task<string>>();
+                    foreach (var w in _workers)
                     {
-                        context.Respond(t.Unwrap().Result);
-                        return Actor.Done;
-                    });
+                        var t = context.RequestAsync<string>(w, work);
+                        tasks.Add(t);
+                    }
+                    
+                    var res = await Task.WhenAny(tasks).Unwrap();
+                    
+                    context.Respond(res);
 
                     break;
                 }
             }
-            return Actor.Done;
         }
     }
 
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            var fanOutProps = Actor.FromProducer(() => new FanOutActor());
-            var fanOutPid = Actor.Spawn(fanOutProps);
+            var system = new ActorSystem();
+            var context = system.Root;
+            
+            var workerProps = Props.FromProducer(() => new WorkerActor());
 
-            var result = fanOutPid.RequestAsync<string>(new DoWork()).Result;
-            Console.WriteLine(result);
-            Console.ReadLine();
+            var workers = new List<PID>();
+            for (var i = 0; i < 10; i++)
+            {
+                var w = context.Spawn(workerProps);
+                workers.Add(w);
+            }
+
+            var fanOutProps = Props.FromProducer(() => new FanOutActor(workers));
+            var fanOutPid = context.Spawn(fanOutProps);
+
+            for (var i = 0; i < 10; i++)
+            {
+                var result = await context.RequestAsync<string>(fanOutPid, new DoWork("somework"));
+                Console.WriteLine(result);
+                Console.ReadLine();
+            }
         }
     }
 }
