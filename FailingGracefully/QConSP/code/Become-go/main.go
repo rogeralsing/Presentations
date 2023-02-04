@@ -7,8 +7,10 @@ import (
 	"github.com/AsynkronIT/protoactor-go/actor"
 )
 
-type Hello struct{ Who string }
-type SetBehaviorActor struct{}
+type (
+	Hello            struct{ Who string }
+	SetBehaviorActor struct{}
+)
 
 func (state *SetBehaviorActor) Receive(context actor.Context) {
 	switch msg := context.Message().(type) {
