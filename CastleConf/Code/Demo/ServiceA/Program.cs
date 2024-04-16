@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
 using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
@@ -10,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddHttpClient();
 
 
 //this defines your resource, meaning the service name, and various associated attribs
@@ -18,7 +20,7 @@ b
     .AddService("ServiceA")
     .AddAttributes(new[]
     {
-        new KeyValuePair<string, object>("some-attrib","some-value")
+        new KeyValuePair<string, object>("some-attrib", "some-value")
     });
 
 //this is used to create manual spans
@@ -60,8 +62,6 @@ builder.Services.AddOpenTelemetry()
     );
 
 
-
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -74,7 +74,10 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 
-app.MapGet("/myendpoint", () =>
+app.MapGet("/myendpoint", async (
+        [FromServices] HttpClient client,
+        [FromServices] ILogger<object> logger
+    ) =>
     {
         //start a new span manually
         using var a = activitySource.StartActivity("MySpan");
@@ -82,10 +85,13 @@ app.MapGet("/myendpoint", () =>
         a?.AddTag("some-tag", "tag value");
         a?.AddEvent(new ActivityEvent("something happened"));
         a?.AddBaggage("some-baggage", "hello world");
-        
-        return "hello";
+
+        logger.LogInformation("Hello from this request");
+
+        var res = await client.GetStringAsync("http://localhost:5202/weatherforecast");
+        return res;
     })
-    .WithName("GetWeatherForecast")
+    .WithName("MyEndpoint")
     .WithOpenApi();
 
 app.Run();

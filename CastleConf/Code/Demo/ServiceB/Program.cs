@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
 using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
@@ -73,8 +74,13 @@ var summaries = new[]
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
 
-app.MapGet("/weatherforecast", () =>
+app.MapGet("/weatherforecast", (        
+        [FromServices] ILogger<object> logger) =>
     {
+        var a = Activity.Current;
+        var b = a?.GetBaggageItem("some-baggage");
+        logger.LogInformation("We have baggage {Baggage}", b);
+        
         var forecast = Enumerable.Range(1, 5).Select(index =>
                 new WeatherForecast
                 (
@@ -83,6 +89,7 @@ app.MapGet("/weatherforecast", () =>
                     summaries[Random.Shared.Next(summaries.Length)]
                 ))
             .ToArray();
+        logger.LogInformation("We are in the weather service, this is the forecast {Forecast}", forecast);
         return forecast;
     })
     .WithName("GetWeatherForecast")
