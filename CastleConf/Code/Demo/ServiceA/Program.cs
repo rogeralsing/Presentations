@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
@@ -11,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
+//this defines your resource, meaning the service name, and various associated attribs
 var b = ResourceBuilder.CreateDefault();
 b
     .AddService("ServiceA")
@@ -19,6 +21,10 @@ b
         new KeyValuePair<string, object>("some-attrib","some-value")
     });
 
+//this is used to create manual spans
+var activitySource = new ActivitySource("some-name");
+
+//configure logging to push to Otel
 builder.Services.AddLogging(loggingBuilder =>
 {
     loggingBuilder.AddOpenTelemetry(o =>
@@ -29,7 +35,9 @@ builder.Services.AddLogging(loggingBuilder =>
     });
 });
 
+//add Otel services
 builder.Services.AddOpenTelemetry()
+    //configure metrics
     .WithMetrics(meterProviderBuilder =>
         {
             meterProviderBuilder
@@ -39,15 +47,19 @@ builder.Services.AddOpenTelemetry()
                 .AddOtlpExporter();
         }
     )
+    //configure tracing
     .WithTracing(tracerProviderBuilder =>
         {
             tracerProviderBuilder
                 .AddAspNetCoreInstrumentation()
                 .AddHttpClientInstrumentation()
+                .AddSource(activitySource.Name)
                 .SetResourceBuilder(b)
                 .AddOtlpExporter();
         }
     );
+
+
 
 
 var app = builder.Build();
@@ -64,6 +76,13 @@ app.UseHttpsRedirection();
 
 app.MapGet("/myendpoint", () =>
     {
+        //start a new span manually
+        using var a = activitySource.StartActivity("MySpan");
+        //if we have a span, add tags, events and baggage
+        a?.AddTag("some-tag", "tag value");
+        a?.AddEvent(new ActivityEvent("something happened"));
+        a?.AddBaggage("some-baggage", "hello world");
+        
         return "hello";
     })
     .WithName("GetWeatherForecast")
