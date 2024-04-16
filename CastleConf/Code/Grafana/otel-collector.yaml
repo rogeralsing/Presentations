@@ -1,0 +1,54 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+
+exporters:
+  otlp:
+    endpoint: tempo:4317
+    tls:
+      insecure: true
+
+  loki:
+    endpoint: "http://loki:3100/loki/api/v1/push"
+    tls:
+      insecure: true
+#    labels:
+#      resource:
+#        container.name: "container_name"
+#        service.name: "service_name"
+#        service.version: "service_version"
+#        service.instance.id: "service_instance_id"
+  prometheusremotewrite:
+    endpoint: http://prometheus:9090/api/v1/write
+
+
+processors:
+  batch:
+    timeout: 200ms
+  resource:
+    attributes:
+    - key: environment
+      value: "dev"
+      action: upsert
+
+extensions:
+  health_check:
+  pprof:
+  zpages:
+
+service:
+  extensions: [pprof, zpages, health_check]
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [resource, batch]
+      exporters: [otlp]
+    metrics:
+      receivers: [otlp]
+      processors: [resource, batch]
+      exporters: [prometheusremotewrite]
+    logs:
+      receivers: [otlp]
+      processors: [resource, batch]
+      exporters: [loki]
