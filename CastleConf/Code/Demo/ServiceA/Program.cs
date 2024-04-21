@@ -76,16 +76,17 @@ app.MapGet("/myendpoint", async (
         [FromServices] ILogger<Program> logger
     ) =>
     {
-        //start a new span manually
-        using var a = activitySource.StartActivity("MySpan");
-        //if we have a span, add tags, events and baggage
-        a?.AddTag("some-tag", "tag value");
-        a?.AddEvent(new ActivityEvent("something happened"));
-        a?.AddBaggage("some-baggage", "hello world");
-
-        logger.LogInformation("Hello from this request");
+        // //start a new span manually
+        // using var a = activitySource.StartActivity("MySpan");
+        // //if we have a span, add tags, events and baggage
+        // a?.AddTag("some-tag", "tag value");
+        // a?.AddEvent(new ActivityEvent("something happened"));
+        // a?.AddBaggage("some-baggage", "hello world");
+        //
+        // logger.LogInformation("Hello from this request");
 
         var res = await client.GetStringAsync("http://localhost:5202/weatherforecast");
+
         return res;
     })
     .WithName("MyEndpoint")

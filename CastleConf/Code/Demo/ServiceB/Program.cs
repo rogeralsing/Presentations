@@ -78,9 +78,9 @@ var summaries = new[]
 app.MapGet("/weatherforecast", (        
         [FromServices] ILogger<Program> logger) =>
     {
-        var a = Activity.Current;
-        var b = a?.GetBaggageItem("some-baggage");
-        logger.LogInformation("We have baggage {Baggage}", b);
+        // var a = Activity.Current;
+        // var b = a?.GetBaggageItem("some-baggage");
+        // logger.LogInformation("We have baggage {Baggage}", b);
         
         var forecast = Enumerable.Range(1, 5).Select(index =>
                 new WeatherForecast
