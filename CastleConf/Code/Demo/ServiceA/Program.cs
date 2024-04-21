@@ -16,12 +16,7 @@ builder.Services.AddHttpClient();
 
 //this defines your resource, meaning the service name, and various associated attribs
 var b = ResourceBuilder.CreateDefault();
-b
-    .AddService("ServiceA")
-    .AddAttributes(new[]
-    {
-        new KeyValuePair<string, object>("some-attrib", "some-value")
-    });
+b.AddService("ServiceA");
 
 //this is used to create manual spans
 var activitySource = new ActivitySource("some-name");
@@ -78,7 +73,7 @@ app.UseHttpsRedirection();
 
 app.MapGet("/myendpoint", async (
         [FromServices] HttpClient client,
-        [FromServices] ILogger<object> logger
+        [FromServices] ILogger<Program> logger
     ) =>
     {
         //start a new span manually

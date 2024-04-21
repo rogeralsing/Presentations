@@ -13,7 +13,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-
 //this defines your resource, meaning the service name, and various associated attribs
 var b = ResourceBuilder.CreateDefault();
 b.AddService("ServiceB");
@@ -77,7 +76,7 @@ var summaries = new[]
 };
 
 app.MapGet("/weatherforecast", (        
-        [FromServices] ILogger<object> logger) =>
+        [FromServices] ILogger<Program> logger) =>
     {
         var a = Activity.Current;
         var b = a?.GetBaggageItem("some-baggage");
