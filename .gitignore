@@ -197,3 +197,5 @@ FakesAssemblies/
 .idea/
 
 .DS_Store
+.DS_Store
+CastleConf/Code/Grafana/tempo-data/
